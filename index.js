@@ -90,7 +90,7 @@ function init() {
 
     fs.writeFile(`${answers.projectTitle}.md`, readmePageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README File!')
-    );
+    )    ;
  } );}
 
 
@@ -136,7 +136,7 @@ const generateREADME = ({ projectTitle, githubName, githubRepo, projectDescripti
 `
 
 
- // function call to initialize program
+//  function call to initialize program
  init();
 
  
