@@ -49,32 +49,42 @@ inquirer
 .then((answers) => {
     const readmePageContent = generateREADME(answers);
 
-    fs.writeFile('README.md', readmePageContent, (err) =>
+    fs.writeFile(`${answers.projectTitle}.md`, readmePageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README File!')
     );
   });
 
 
 
-// TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
-
 
 const generateREADME = ({ projectTitle, projectDescription, projectInstallation, projectContribution, projectUsage}) =>
   
- ` ${projectTitle}
+ ` 
+ ${projectTitle}
 
+ # Table of Contents 
+
+ ## Description
  ${projectDescription}
- 
+
+ ## Installation
  ${projectInstallation}
 
+ ### Usage
+ ${projectUsage};
+ ### License
+
+ ## Contributing
  ${projectContribution}
 
- ${projectUsage}`; ;
+
+ #### Tests
+
+ ###  Questions`
+ 
+ 
+
+ ;
 
 
 
